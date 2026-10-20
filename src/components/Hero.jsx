@@ -113,7 +113,7 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface p-2 shadow-2xl shadow-black/30">
               <div className="absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black/70 to-transparent" />
               <img
-                src="/profile.png"
+                src={`${import.meta.env.BASE_URL}profile.png`}
                 alt={`${profile.name} — ${profile.role}`}
                 width={1200}
                 height={1200}

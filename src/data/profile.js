@@ -13,8 +13,9 @@ export const profile = {
   location: 'Nobaria, Egypt',
   email: 'abdh.3wad@gmail.com',
   phone: '+201124048668',
-  // Put your CV PDF inside /public and point to it here, e.g. '/cv.pdf'
-  cvFile: '/cv.pdf',
+  // The CV PDF lives in /public. BASE_URL keeps it working when the site is
+  // hosted under a sub-path (e.g. GitHub Pages at /Portfolio/).
+  cvFile: `${import.meta.env.BASE_URL}cv.pdf`,
 
   availability: 'Open to internships & frontend roles',
 
