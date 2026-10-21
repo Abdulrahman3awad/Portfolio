@@ -6,7 +6,7 @@ import { skillIcons } from './iconMaps'
 export default function Skills() {
   return (
     <section id="skills" className="relative py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/4 top-1/3 size-80 rounded-full bg-brand-700/15 blur-[120px]" />
       </div>
 

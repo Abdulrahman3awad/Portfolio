@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from './Icons'
 export default function Projects() {
   return (
     <section id="projects" className="relative py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="grid-lines absolute inset-0 mask-fade-x opacity-40" />
         <div className="absolute right-1/4 top-20 size-80 rounded-full bg-glow/10 blur-[120px]" />
       </div>

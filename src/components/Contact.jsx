@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/2 top-10 size-[34rem] -translate-x-1/2 rounded-full bg-brand-600/15 blur-[130px]" />
       </div>
 
@@ -69,7 +69,7 @@ export default function Contact() {
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition-all hover:brightness-110"
                 >
                   <MailIcon className="size-4" />
-                  {profile.email}
+                  <span className="break-all">{profile.email}</span>
                 </a>
                 <a
                   href={profile.links.phone}
@@ -81,7 +81,7 @@ export default function Contact() {
               </div>
 
               {/* Socials */}
-              <div className="mt-9 flex items-center gap-3 border-t border-line pt-7">
+              <div className="mt-9 flex flex-wrap items-center gap-3 border-t border-line pt-7">
                 {socials.map(({ href, label, Icon }) => (
                   <a
                     key={label}
@@ -94,7 +94,9 @@ export default function Contact() {
                     <Icon className="size-5" />
                   </a>
                 ))}
-                <span className="ml-2 text-sm text-faint">Find me on GitHub, LinkedIn &amp; YouTube</span>
+                <span className="ml-2 text-sm text-faint">
+                  Find me on GitHub, LinkedIn &amp; YouTube
+                </span>
               </div>
             </div>
           </Reveal>

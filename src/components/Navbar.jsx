@@ -101,7 +101,7 @@ export default function Navbar() {
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
-                className={`relative rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+                className={`relative rounded-lg px-2.5 py-2 text-sm font-medium transition-colors xl:px-3.5 ${
                   active === link.id ? 'text-accent-strong' : 'text-muted hover:text-heading'
                 }`}
               >
@@ -116,18 +116,21 @@ export default function Navbar() {
 
         {/* Desktop actions */}
         <div className="hidden items-center gap-2 lg:flex">
-          {socialLinks.map(({ href, label, Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={label}
-              className="grid size-9 place-items-center rounded-lg border border-line text-muted transition-colors hover:border-accent-border hover:text-accent"
-            >
-              <Icon />
-            </a>
-          ))}
+          {/* Socials — revealed from xl so the row never overflows on narrow desktops */}
+          <div className="hidden items-center gap-2 xl:flex">
+            {socialLinks.map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="grid size-9 place-items-center rounded-lg border border-line text-muted transition-colors hover:border-accent-border hover:text-accent"
+              >
+                <Icon />
+              </a>
+            ))}
+          </div>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <a
             href="#contact"
@@ -173,7 +176,7 @@ export default function Navbar() {
           ))}
           <li className="mt-2 flex items-center gap-2 border-t border-line pt-4">
             <a
-              href={profile.links.email}
+              href={profile.links.email}      
               onClick={() => setOpen(false)}
               className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-white"
             >

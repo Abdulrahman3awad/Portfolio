@@ -8,7 +8,7 @@ export default function Videos() {
 
   return (
     <section id="videos" className="relative py-24">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/3 top-24 size-80 rounded-full bg-brand-600/15 blur-[120px]" />
       </div>
 
@@ -23,7 +23,7 @@ export default function Videos() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.45fr_1fr]">
           {/* Player */}
-          <Reveal>
+          <Reveal className="min-w-0">
             <div className="card-glass overflow-hidden rounded-2xl p-2">
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
                 <iframe
@@ -59,7 +59,7 @@ export default function Videos() {
           </Reveal>
 
           {/* Channel + playlist */}
-          <Reveal delay={120}>
+          <Reveal delay={120} className="min-w-0">
             <div className="card-glass flex h-full flex-col rounded-2xl p-6">
               <div className="flex items-center gap-3">
                 <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-[#ff0033]/15 text-[#ff0033]">
