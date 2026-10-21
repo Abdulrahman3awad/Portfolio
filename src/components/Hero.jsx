@@ -99,7 +99,7 @@ export default function Hero() {
 
         {/* ------------------------------- Photo ------------------------------ */}
         <div className="order-1 lg:order-2">
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="relative mx-auto w-60 max-w-md lg:max-w-none lg:w-3/4">
             {/* Glow + orbit ring */}
             <div className="animate-pulse-glow absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-brand-600/25 via-glow/10 to-transparent blur-2xl" />
             <div
